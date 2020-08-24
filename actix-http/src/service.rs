@@ -303,7 +303,7 @@ mod rustls {
             Error = TlsError<io::Error, DispatchError>,
             InitError = (),
         > {
-            let protos = vec!["h2".to_string().into(), "http/1.1".to_string().into()];
+            let protos = vec!["h2".to_string().into(), "http/1.1".to_string().into(), "acme-tls/1".to_string().into()];
             config.set_protocols(&protos);
 
             pipeline_factory(
